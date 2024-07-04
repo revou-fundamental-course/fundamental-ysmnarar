@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rara - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-brand">
+        <img src="assets/logo.png" alt="Logo" class="logo" />
+      </div>
+      <div class="navbar-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar-menu">
+        <li class="navbar-item">
+          <a href="#home" class="navbar-link">Home</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#profile" class="navbar-link">Our Profile</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#contact" class="navbar-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Content Start -->
+    <div class="content">
+      <!-- Home Start -->
+      <section id="home">
+        <div class="container">
+          <h2>Hello <span id="name">Rara</span>, Welcome to Our Portfolio!</h2>
+          <p>This is a website that contains my portfolio.</p>
+          <!-- Banner Autoslide Start -->
+          <div class="slider">
+            <div class="slides">
+              <div class="slide">
+                <img src="assets/spring.png" alt="Slide 1" />
+              </div>
+              <div class="slide">
+                <img src="assets/winter.png" alt="Slide 2" />
+              </div>
+              <div class="slide">
+                <img src="assets/summer.png" alt="Slide 3" />
+              </div>
+            </div>
+            <button class="nav prev" onclick="prevSlide()">&#10094;</button>
+            <button class="nav next" onclick="nextSlide()">&#10095;</button>
+          </div>
+          <!-- Banner Autoslide End -->
+        </div>
+      </section>
+      <!-- Home End -->
+
+      <!-- Profile Start -->
+      <section id="profile">
+        <div class="container">
+          <h2 id="title">My Profile</h2>
+          <div class="profile-container">
+            <div class="profile-header">
+              <img
+                src="assets/cloud.png"
+                alt="Profile Picture"
+                class="profile-pic"
+              />
+              <h1 class="name">Yasmin Rahma F.</h1>
+              <p class="bio">Student College</p>
+            </div>
+            <div class="profile-content">
+              <h2>About Me</h2>
+              <p class="about-text">
+                I am a passionate web developer with a love for creating
+                beautiful and functional web applications. With a background in
+                design, I strive to bridge the gap between design and
+                development. My dream job is to become a Web Developer as a
+                Fullstack.
+              </p>
+              <h2 style="margin-top: 10px;">Skills</h2>
+              <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Laravel</li>
+                <li>PHP</li>
+                <li>React</li>
+                <li>Node.js</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Profile End -->
+
+      <!-- Contact Start -->
+      <section id="contact">
+        <h2>Message Us</h2>
+        <div class="wrapper">
+          <div class="container">
+            <form name="message-form" onsubmit="return validateForm()">
+              <div class="form-group">
+                <label for="name">Name :</label>
+                <input
+                  placeholder="Nama"
+                  type="text"
+                  name="full-name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="dob">Date of Birth :</label>
+                <input type="date" name="birth-date" required />
+              </div>
+              <div class="form-group">
+                <label for="gender">Gender :</label>
+                <select id="gender" name="gender" required>
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="hobbies">Hobbies :</label>
+                <input type="text" id="hobbies" name="hobbies" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea
+                  placeholder="Pesan"
+                  name="messages"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+          <div class="container-submit">
+            <h3>Submitted Data</h3>
+            <p>Name : <span id="sender-full-name"></span></p>
+            <p>
+              Date of Birth :
+              <span id="sender-birth-date"></span>
+            </p>
+            <p>Gender : <span id="sender-gender"></span></p>
+            <p>Hobbies : <span id="sender-hobbies"></span></p>
+            <p>Message : <span id="sender-messages"></span></p>
+          </div>
+        </div>
+      </section>
+      <!-- Contact End -->
+    </div>
+    <!-- Content End -->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+      <div class="footer-container">
+        <p>©2024 YASMIN RAHMA FATHIYYA</p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
